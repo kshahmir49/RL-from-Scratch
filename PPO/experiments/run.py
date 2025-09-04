@@ -5,6 +5,16 @@ import numpy as np
 import torch
 import torch.optim as optim
 from collections import deque
+import sys
+import os
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Get the parent directory path
+parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
+
+# Add the parent directory to sys.path
+sys.path.append(parent_dir)
 
 from rl.common.envs import make_env
 from rl.common.utils import set_seed, normalize_advantages, explained_variance
