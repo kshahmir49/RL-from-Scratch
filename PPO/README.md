@@ -24,15 +24,3 @@ pip install -r requirements.txt
 ```bash
 python experiments/run.py --config configs/ppo_cartpole.yaml
 ```
-
-This will:
-- train PPO on CartPole-v1,
-- log metrics as CSV under `outputs/<timestamp>/metrics.csv`,
-- save a model checkpoint under `outputs/<timestamp>/checkpoint.pt`,
-- render plots (mean ± 95% CI across seeds) to `reports/figures/`,
-- and stop early once the moving average reward ≥ **475** over the last 100 episodes.
-
-### 4) Run tests
-```bash
-pytest -q
-```
