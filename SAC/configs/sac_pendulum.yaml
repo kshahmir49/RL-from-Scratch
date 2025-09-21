@@ -1,0 +1,19 @@
+env_id: Pendulum-v1
+seed_list: [0, 1, 2]
+total_env_steps: 300000
+start_steps: 10000
+update_after: 1000
+update_every: 50
+updates_per_round: 50
+batch_size: 256
+replay_size: 1000000
+gamma: 0.99
+tau: 0.005
+actor_lr: 0.0003
+critic_lr: 0.0003
+auto_alpha: true
+init_alpha: 0.2
+target_entropy_scale: 1.0
+log_interval: 1000
+eval_interval: 5000
+early_stop_avg: null
